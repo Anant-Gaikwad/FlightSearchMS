@@ -1,21 +1,35 @@
 # Getting Started
+# FlightSearch MicroService
 
-### Reference Documentation
+Flight Search with passenger details  Requirment : 
+ 1. Add logger in filter to log all request and response
+ 2. Add Interceptor to validate request param pattern(flight Number as : FL_<ALPHA>_<NUMERIC>)
+ 3. Add Create and insert scripts through flyway.
+ 4. Get valid response 
+  
+Installation Setps
 For further reference, please consider the following sections:
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.2.2.RELEASE/maven-plugin/)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.2.2.RELEASE/reference/htmlsingle/#using-boot-devtools)
-* [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.2.2.RELEASE/reference/htmlsingle/#boot-features-jpa-and-spring-data)
-* [Flyway Migration](https://docs.spring.io/spring-boot/docs/2.2.2.RELEASE/reference/htmlsingle/#howto-execute-flyway-database-migrations-on-startup)
-* [Rest Repositories](https://docs.spring.io/spring-boot/docs/2.2.2.RELEASE/reference/htmlsingle/#howto-use-exposing-spring-data-repositories-rest-endpoint)
+Pre-Requisites on Local Machine
+   1. Java 1.8
+   2. Maven
+   3. Mysql running on port 3306
 
-### Guides
-The following guides illustrate how to use some features concretely:
+Installation
 
-* [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
-* [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
-* [Accessing JPA Data with REST](https://spring.io/guides/gs/accessing-data-rest/)
-* [Accessing Neo4j Data with REST](https://spring.io/guides/gs/accessing-neo4j-data-rest/)
-* [Accessing MongoDB Data with REST](https://spring.io/guides/gs/accessing-mongodb-data-rest/)
+Once Installation is done follow following steps:
 
+1. Set the properties into the application.properties as:
+
+     spring.datasource.username=(set your Mysql UserName) ,
+     spring.datasource.password=(set your Mysql password)
+
+when app starts up will have 2 Flights with Passenger details, these records inserted via flyway Migration scripts.
+
+Steps to Run
+
+1. Run you project with mvn spring-boot:run 
+
+2. Open Postman to test URL with http://localhost:8081/flight/getFlight?flightNo=FL_SIN_1011
+   
+3. To see all flights  http://localhost:8081/flight/getAllFlight
