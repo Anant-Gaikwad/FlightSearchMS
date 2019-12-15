@@ -28,6 +28,7 @@ The app when it comes up will have 2 Flights with Passenger details inserted in 
 Steps to Run
 
 1. Run you project with mvn spring-boot:run 
-   And launch from browser with http://localhost:8081/flight/getFlight?flightNo=FL_SIN_1011
+
+2. Open Postman to test URL with http://localhost:8081/flight/getFlight?flightNo=FL_SIN_1011
    
-2. To see all flights  http://localhost:8081/flight/getAllFlight
+3. To see all flights  http://localhost:8081/flight/getAllFlight
