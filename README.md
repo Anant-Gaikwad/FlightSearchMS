@@ -1,7 +1,7 @@
 # FlightSearch MicroService
 
 Flight Search with passenger details  Requirment : 
- 1. Add logger in filter to log all request and responce
+ 1. Add logger in filter to log all request and response
  2. Add Interceptor to validate request param pattern(flight Number as : FL_<ALPHA>_<NUMERIC>)
  3. Add Create and insert scripts through flyway.
  4. Get valid response 
@@ -20,10 +20,10 @@ Once Installation is done follow following steps:
 
 1. Set the properties into the application.properties as:
 
-    spring.datasource.username=(set your Mysql UserName)
-    spring.datasource.password=(set your Mysql password)
+     spring.datasource.username=(set your Mysql UserName) ,
+     spring.datasource.password=(set your Mysql password)
 
-The app when it comes up will have 2 Flights with Passenger details inserted in the system via flyway Migration scripts-
+when app starts up will have 2 Flights with Passenger details, these records inserted via flyway Migration scripts.
 
 Steps to Run
 
